@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>UKrestu Esihlabelelweni</h1>
+
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterSongs()">
+    <button onclick="filterSongs()">Search</button>
+
+    <div id="songList">
+        <div><a href="1-Vuthela Icingo.html">Vuthela Icingo</a></div>
+        <div><a href="2-Emnyango Impela.html">Emnyango Impela</a></div>
+        <div><a href="3-Ubuso Nobuso.html">Ubuso Nobuso</a></div>
+        <div><a href="4-U_Yeza.html">U Yeza</a></div>
+        <div><a href="5-Kude Kangakanani Ekhaya.html">Kude Kangakanani Ekhaya?</a></div>
+        <div><a href="6-Lindani, Bangcwele.html">Lindani, Bangcwele</a></div>
+        <div><a href="7-Nxa Efika.html">Nxa Efika</a></div>
+        <div><a href="8-Nxa Bebizwa Phezulu.html">Nxa Bebizwa Phezulu</a></div>
+        <div><a href="9-UJes'U Yeza Futhi.html">UJes'U Yeza Futhi!</a></div>
+        <div><a href="10-Buthanani Emfuleni.html">Buthanani Emfuleni</a></div>
+    </div>
+
+    <script>
+        // Automatically add numbers to the beginning of each song title
+        const songDivs = document.querySelectorAll('#songList div');
+        songDivs.forEach((div, index) => {
+            const link = div.querySelector('a');
+            link.textContent = `${index + 1} ${link.textContent}`;
+        });
+
+        // Filter function
+        function filterSongs() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            songDivs.forEach(div => {
+                const text = div.textContent.toLowerCase();
+                div.style.display = text.includes(filter) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
+

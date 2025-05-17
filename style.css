@@ -1,0 +1,52 @@
+a{
+    text-decoration: none;
+    font-size: x-large;
+}
+a:hover{
+    color:aquamarine;
+}
+h1{
+    font-family: cursive;
+    font-size: xx-large;
+}
+h2{
+    font-family: cursive;
+    font-size: xx-large;
+    text-align: center;
+}
+h4{
+    font-family: cursive;
+    font-size: xx-large;
+    text-align: center;
+}
+p{
+    font-size: xx-large;
+    text-align: center;
+}
+body{
+    background-color: black;
+    color:white;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid white;
+    border-radius: 8px; /* rounded edges */
+    background-color: #222;
+    color: white;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    border-radius: 8px; /* this makes the edges rounded */
+    border: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #777;
+}
