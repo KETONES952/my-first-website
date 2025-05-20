@@ -13,17 +13,20 @@ h2{
     font-family: cursive;
     font-size: xx-large;
     text-align: center;
+    margin-bottom: 1rem;
 }
 h4{
     font-family: cursive;
     font-size: xx-large;
     text-align: center;
+    margin-bottom: 1rem;
 }
 p{
     font-size: xx-large;
     text-align: center;
 }
 body{
+    margin: 0;
     background-color: black;
     color:white;
 }
@@ -49,4 +52,61 @@ button {
 
 button:hover {
     background-color: #777;
+}
+.page {
+    height: 100vh;               /* Full screen height */
+    padding: 20px;               /* Comfortable padding */
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     /* Vertically center text */
+    
+    /* Optional: center horizontally */
+    align-items: center;
+    
+    /* For readability */
+    font-family: Georgia, serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+#nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    gap: 20px;
+    z-index: 1000;
+}
+
+#nav-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a90e2;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#nav-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#nav-buttons button:not(:disabled):hover {
+    background-color: #357ABD;
+}
+
+#songList {
+    background-image: url('images/sda-hymnal-image.png');
+    margin-top: 30px;
+    border-radius: 8px;
 }
