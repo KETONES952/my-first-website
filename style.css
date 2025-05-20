@@ -106,7 +106,7 @@ button:hover {
 }
 
 #songList {
-    background-image: url('images/sda-hymnal-image.png');
+    background-image: url('sda-hymnal-image.png');
     margin-top: 30px;
     border-radius: 8px;
 }
